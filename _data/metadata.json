@@ -1,0 +1,50 @@
+{
+	"title": "Eddy.",
+    "subtitle": "an 11tytheme for minimal editions",
+	"description": "Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.",
+	"url": "",
+	"favicon": "/images/logo.png",
+	"image": "/images/logo.png",
+	"language": "en",
+	"locale": "en_US",
+	"metasocial": {
+		"image": "/images/logo-ls.png",
+		"facebook": "",
+		"twitteruser": "",
+		"twitter": ""
+	},
+	"navbar": [
+		{
+			"name": "Home",
+			"link": "/"
+		},
+		{
+			"name": "About",
+			"link": "/about"
+		},
+		{
+			"name": "Credits",
+			"link": "/credits"
+		},
+        {
+			"name": "Documentation",
+			"link": "/documentation"
+		},
+        {
+			"name": "Annotate Me",
+			"link": "/"
+		},		{
+			"name": "Github",
+			"link": "/"
+		}],
+    "footer": {
+		"copyrights": {
+			"text1": "Built with ",
+            "text2": "Eddy ",
+			"text2_link": "https://11ty.dev/",
+            "text3": "and 11ty ",
+            "text3_link": "https://11ty.dev/",
+			"text4": "Distributed under an MIT license."
+		}
+}
+}
