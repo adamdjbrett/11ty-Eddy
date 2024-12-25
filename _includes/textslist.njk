@@ -1,0 +1,8 @@
+<div class="toc">
+<ul class="texts">
+{% for post in postslist | reverse %}
+<li class="text-title">
+<a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
+</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+<nav class="sidebar-nav">
+{% for n in metadata.navbar %}
+<a class="sidebar-nav-item" href="{{n.link}}">{{n.name}}</a>
+{% endfor %}
+<span style='cursor:pointer;' onclick="javascript:var hypothesis = document.createElement('script');
+hypothesis.setAttribute('src','https://hypothes.is/embed.js');
+document.head.appendChild(hypothesis);"><a class="sidebar-nav-item">Annotate me</a></span>
+<a class="sidebar-nav-item" href="{{metadata.nav_github.link}}" target="_blank">{{metadata.nav_github.name}}</a>
+</nav>

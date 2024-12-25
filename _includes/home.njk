@@ -1,0 +1,11 @@
+---
+layout: base.njk
+---
+<main class="container content" id="main">
+<article class="poem poetry">
+<h1 class="text-title">{{title}}</h1>
+{% if description %}<p class="byline">{{description}}</p>{% endif %}
+{% include "partials/toc.njk" %}
+{{ content | safe }}
+</article>
+</main>

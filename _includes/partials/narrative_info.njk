@@ -1,0 +1,11 @@
+{% if show_narrative_info %}<div id="title-page">
+{% for n in narrative.title %}<p class="centered large">{{n.text}}<br/></p>{% endfor %}
+<br>
+<p class="centered larger">{{narrative.author}}</p>
+{% for in in narrative.info %}<p class="centered large">{{in.text}}<br></p>{% endfor %}
+<br>
+<p class="centered">{{narrative.city}}</p>
+{% for j in narrative.published %}<p class="centered">{{j.text}}<br></p>{% endfor %}
+{% for fo in narrative.footer %}<p class="centered small">{{fo.text}}<br></p>{% endfor %}
+</div>
+<hr/>{% endif %}

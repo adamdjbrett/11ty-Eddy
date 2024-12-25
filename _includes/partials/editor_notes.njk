@@ -1,0 +1,3 @@
+{% if show_editor_notes %}{% if editor_notes.title %}<h3>{{editor_notes.title}}</h3>{% endif %}
+{% if editor_notes.text %}<p>{{editor_notes.text | safe}}</p>{% endif %}
+<hr/>{% endif %}

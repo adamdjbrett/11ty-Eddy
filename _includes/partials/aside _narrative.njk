@@ -1,0 +1,16 @@
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+<div class="sidebar-item">
+<p>{{metadata.description}}</p>
+</div>
+<nav class="sidebar-nav">
+<a class="sidebar-nav-item" href="{{metadata.url}}">Home</a>
+<a class="sidebar-nav-item" href="#">Return to Top</a>
+<a class="sidebar-nav-item" href="#title_page">{{title}}</a>
+{{ content | toc| safe }}
+<span style='cursor:pointer;' onclick="javascript:var hypothesis = document.createElement('script');
+hypothesis.setAttribute('src','https://hypothes.is/embed.js');
+document.head.appendChild(hypothesis);"><a class="sidebar-nav-item">Annotate me</a></span>
+<a class="sidebar-nav-item" href="{{metadata.nav_github.link}}" target="_blank">{{metadata.nav_github.name}}</a>
+</nav>
+{% include "partials/sidebar_narrative.njk" %}
+</aside>

@@ -1,0 +1,36 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title or metadata.title }}</title>
+<meta name="description" content="{{ description or metadata.description }}">
+<meta property="dc:title" content="{{title or metadata.title}}" />
+{% if author %}<meta property="dc:creator" content="{{author}}" />{% endif %}
+<meta property="dc:identifier" content="{{metadata.url}}{{page.url}}" />
+{% if editor %}<meta property="dc:contributor" content="{{editor}}" />{% endif %}
+{% if source %}<meta property="dc:source" content="{{source}}"/>{% endif %}
+{% if publish %}<meta property="dc:date" content="{{publish}}" />{% endif %}
+{% if rights %}<meta property="dc:rights" content="{{rights}}" />{% endif %}
+<meta property="og:title" content="{{title or metadata.title}}" />
+<meta property="twitter:title" content="{{title or metadata.title}}" />
+<meta property="og:url" content="{{metadata.url}}" />
+<meta property="og:image" content="{{image or metadata.image}}" />
+<meta name="twitter:image" content="{{image or metadata.image}}"/>
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:description" content="{{description or metadata.description}}">
+<meta property="twitter:description" content="{{description or metadata.description}}">
+<meta property="og:type" content="article" />
+<meta content="{{metadata.metasocial.facebook}}" property="facebook:author">
+<meta content="{{metadata.metasocial.twitteruser}}" property="twitter:author">
+<meta content="{{metadata.metasocial.twitter}}" name="twitter:site">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{metadata.favicon}}" />
+<link rel="shortcut icon" href="{{metadata.favicon}}" />
+<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+<link rel="canonical" href="{{canonical or metadata.url}}/"/>
+<meta name="locale" content="{{metadata.locale}}">
+<meta name="generator" content="{{ eleventy.generator }}">
+{%- css %}{% include "public/css/main.css" %}{% endcss %}
+{%- css %}{% include "public/css/nu.css" %}{% endcss %}
+<style>{% getBundle "css" %}</style>
+{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+</head>

@@ -1,30 +1,30 @@
 ---
-layout: poem
 title: Delayed till she had ceased to know
 author: Emily Dickinson
 editor: Alex Gil
 source: "Bartleby.com"
+canoncial: 
 ---
 
 - DELAYED till she had ceased to know,
 - Delayed till in its vest of snow
-- {:.indent-2}Her loving bosom lay.
+- Her loving bosom lay.{.indent-2}
 - An hour behind the fleeting breath,
 - Later by just an hour than death,—
-- {:.indent-2}Oh, lagging yesterday!
+- Oh, lagging yesterday!{.indent-2}
 
 
 - Could she have guessed that it would be;
 - Could but a crier of the glee	
-- {:.indent-2}Have climbed the distant hill;
+- Have climbed the distant hill;{.indent-2}
 - Had not the bliss so slow a pace,—
 - Who knows but this surrendered face
-- {:.indent-2}Were undefeated still?
+- Were undefeated still?{:.indent-2}
 
 
 - Oh, if there may departing be
 - Any forgot by victory
-- {:.indent-2}In her imperial round,
+- In her imperial round,{.indent-2}
 - Show them this meek apparelled thing,
 - That could not stop to be a king,
-- {:.indent-2}Doubtful if it be crowned!
+- Doubtful if it be crowned!{.indent-2}

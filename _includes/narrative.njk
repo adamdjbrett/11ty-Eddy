@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+{% include "partials/head.njk" %}
+ <body class="theme-base-{{metadata.theme_base_color}}">
+{% include "partials/menu_narrative.njk" %}
+<main class="container content" id="main">
+<article class="poem poetry">
+<h1 class="text-title" id="title_page">{{title}}</h1>
+<p class="byline">{{author or description}}</p>
+{% include "partials/toc.njk" %}
+<div class="article">
+{% include "partials/editor_notes.njk" %}
+{% include "partials/narrative_info.njk" %}
+{{ content | safe }}
+</div>
+</article>
+</main>
+{%- js %}{% include "public/js/main.js" %}{% endjs %}
+<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+</body>
+</html>

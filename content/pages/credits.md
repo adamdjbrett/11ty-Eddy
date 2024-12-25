@@ -1,6 +1,8 @@
 ---
-layout: page
 title: Credits
+description: 
+image: 
+canoncial: 
 permalink: /credits/
 ---
 

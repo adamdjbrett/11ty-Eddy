@@ -1,34 +1,13 @@
 ---
-layout: page
 title: Documentation
 author: Alex Gil
+description: 
+image: 
+canoncial: 
+show_table_of_content: true
 permalink: /documentation/
 ---
-Documentation
-=============
 
-Contents
---------
-
--   [Prerequisites](https://minicomp.github.io/ed/documentation/#prerequisites)
--   [Using Ed as a Template](https://minicomp.github.io/ed/documentation/#using-ed-as-a-template)
--   [Installing Ed Locally](https://minicomp.github.io/ed/documentation/#installing-ed-locally)
-    -   [Existing Ruby environments](https://minicomp.github.io/ed/documentation/#existing-ruby-environments)
-    -   [Installing from scratch](https://minicomp.github.io/ed/documentation/#installing-from-scratch)
--   [Replacing an existing Jekyll theme with Ed](https://minicomp.github.io/ed/documentation/#replacing-an-existing-jekyll-theme-with-ed)
--   [Jekyll](https://minicomp.github.io/ed/documentation/#jekyll)
--   [Markdown and kramdown](https://minicomp.github.io/ed/documentation/#markdown-and-kramdown)
--   [Genres](https://minicomp.github.io/ed/documentation/#genres)
--   [Footnotes](https://minicomp.github.io/ed/documentation/#footnotes)
--   [Blockquotes](https://minicomp.github.io/ed/documentation/#blockquotes)
--   [Pages](https://minicomp.github.io/ed/documentation/#pages)
--   [Tables of Content](https://minicomp.github.io/ed/documentation/#tables-of-content)
--   [Bibliographies](https://minicomp.github.io/ed/documentation/#bibliographies)
--   [Tips and Tricks](https://minicomp.github.io/ed/documentation/#tips-and-tricks)
--   [Publishing: A UNIX server](https://minicomp.github.io/ed/documentation/#publishing-a-unix-server)
--   [Publishing: GitHub pages](https://minicomp.github.io/ed/documentation/#publishing-github-pages)
-
-* * * * *
 
 Prerequisites
 -------------
@@ -452,141 +431,6 @@ Besides the homepage and the search page, Ed ships with an About page, `about.m
 
 * * * * *
 
-Tables of Content
------------------
-
-You will find three kinds of Tables of Content in Ed. The first example is in the list of Sample Texts in the Homepage. This list is generated using the [Liquid Templating language](http://liquidmarkup.org/). This is one of the major components of Jekyll, and I recommend you deepen your knowledge of it if you want to modify the logic that automates much of Ed. Here is the code that generates the Sample Texts list on the homepage:
-
-```
-<div class="toc">
-  <h2>Sample texts</h2>
-  <ul class="post">
-
-    <li class="text-title">
-      <a href="/ed/texts/a-julia/">
-        A Julia de Burgos
-      </a>
-    </li>
-
-    <li class="text-title">
-      <a href="/ed/texts/delayed/">
-        Delayed till she had ceased to know
-      </a>
-    </li>
-
-    <li class="text-title">
-      <a href="/ed/texts/dreams/">
-        Dreams
-      </a>
-    </li>
-
-    <li class="text-title">
-      <a href="/ed/texts/narrative/">
-        Narrative of the Life of Frederick Douglass
-      </a>
-    </li>
-
-    <li class="text-title">
-      <a href="/ed/texts/o-captain/">
-        O Captain! My Captain!
-      </a>
-    </li>
-
-    <li class="text-title">
-      <a href="/ed/texts/raisin/">
-        A Raisin in the Sun
-      </a>
-    </li>
-
-  </ul>
-</div>
-
-```
-
-As you can see, the liquid tags `{% %}` and `{{ }}` are embedded into the HTML. Those with `{% %}` often use programmatic logic, as is the case here. If you are not already familiar with programming languages, you may need to start elsewhere. I recommend learning Ruby, since this is the language used to build jekyll and jekyll-scholar in the first place (it's also the first programming language I used, so I'm biased). The `{{ }}` simply pulls data from your project. In the example above it pulls the title from each 'post', i.e. each edited text. As you may have noticed already, we are basically adapting the blogging features of Jekyll to our own ends, what Cuban designer and theorist Ernesto Oroza would call "[technological dissobedience](http://www.ernestooroza.com/)."
-
-The second kind of table of content is exemplified in this documentation. If you open the source file for the documentation, you will notice at the top this snippet:
-
-```
-## Contents
-{:.no_toc}
-
-* ToC
-{:toc}
-
-```
-
-This is the kramdown way. The first tag, `{:.no_toc}` tells the processor not to add `## Contents` to the ToC. The second part creates an empty list and then tells the processor to replace it with a table of contents based on headers in the document. You can use this syntax in any page on the site that uses headers.
-
-The third way is slightly more involved, but very useful for long texts. If we add the table of contents to the YAML front matter of a page, Ed will activate the optional table of content sidebar (`_includes/sidebar-toc.html`) and move the table of contents to a special sidebar for that page. *Narrative of the Life* uses this method for its table of content. If you would like to replicate this functionality in your own long texts, make sure to use the same syntax:
-
-```
-toc:
-- Title Page
-- Preface
-- Letter From Wendell Phillips
-- Chapter I
-- Chapter II
-
-```
-
-The internal links pointing to the right sections in your document are generated from the title names automatically. In order for the links to work the names on section headings must contain the same words as the section headers. The punctuation and capitalization is irrelevant. If you can figure out how Ed accomplishes this trick, you have graduated from the Ed school of minimal editions.
-
-* * * * *
-
-Bibliographies
---------------
-
-If you want to include a small bibliography, and you feel it would be easier to write it out directly, Ed can help you render it with hanging indentation. To achieve this effect make sure to use the `.bibliography` class in an ordered list. For example:
-
-```
-1. Douglass, Frederick et al. Narrative of the Life of Frederick Douglass: An American Slave. Charlottesville, Va.: University of Virginia Library, 1996. Open WorldCat. Web. 17 Apr. 2016.
-2. Hansberry, Lorraine, and Robert Nemiroff. A Raisin in the Sun. Rep Rei edition. New York: Vintage, 2004. Print.
-{.bibliography}
-
-```
-
-Which should display like this:
-
-1.  Douglass, Frederick et al. Narrative of the Life of Frederick Douglass: An American Slave. Charlottesville, Va.: University of Virginia Library, 1996. Open WorldCat. Web. 17 Apr. 2016.
-2.  Hansberry, Lorraine, and Robert Nemiroff. A Raisin in the Sun. Rep Rei edition. New York: Vintage, 2004. Print.
-
-* * * * *
-
-To help us style and generate bibliographies and citations *automatically*, Ed can use the jekyll-scholar gem by [Sylvester Keil](https://github.com/inukshuk/). To learn more about the gem beyond the basic instructions below, make sure to read the documentation on the [jekyll-scholar](https://github.com/inukshuk/jekyll-scholar) GitHub page. Keep in mind, though, that installing jekyll-scholar and working with it may be a bit difficult for beginners.
-
-If you can get over the hurdles, jekyll-scholar can save you enormous amounts of time in the long term for your citation and bibliographic work. To begin, you must move the contents of the `jekyll-scholar starter kit` in your `optional` folder into the root folder. This will effectively replace the original `_config.yml` and `Gemfile` files, and add a `_bibliography` folder, and the `bibliography.md` and `Rakefile` files. To enable jekyll-scholar you must re-run `bundle install` again.
-
-If everything goes smoothly, you should be able to start using jekyll-scholar at this point. The first thing you may want to do is provide Jekyll with your own bibliographic information in the form of a `.bib` file to replace the content of the `references.bib` file we've provided in the `_bibliography` folder.
-
-To make it easy to create your own version of this file and to keep track of your bibliography for your project, in general I recommend you use [Zotero](http://zotero.org/). To export from Zotero in this format select the references you need from within your Zotero library, right click and select `export in...` and choose the BibLaTeX format. Rename your file to `references.bib` and move it into the `_bibliography` folder. You are, of course, free to create your `references.bib` file using any method you prefer as long as it is a BibTeX file.
-
-Because as textual editors we are more likely than not to use citations in footnotes or pages that contain footnotes, and because footnotes will be necessarily generated at the bottom of the page, Ed also needs a separate page for your Bibliography or works cited. This is the role of the `bibliography.md` file. Feel free to edit the sample text, but make sure to leave the following line intact:
-
-{% bibliography %}
-
-To link your citations to the bibliography page, instead of writing them by hand, you can use the cite function in jekyll-scholar:
-
-{% cite cesaire_discourse_2001 %}
-
-Here's the breakdown:
-
--   `cite` is the jekyllscholar command.
--   `cesaire_discourse_2001` is the unique ID for Césaire's *Discourse on Colonialism* entry included in the reference.bib file.
-
-Note that our jekyll-scholar starter kit comes ready for MLA style. To use Chicago style or more advanced citation features, refer to the documentation on jekyll-scholar to make the appropriate changes.
-
-**Publishing your site on Github Pages with jekyll-scholar**
-
-If you install jekyll-scholar, or most other plugins in Jekyll, you will need a workaround to publish your site on Github Pages, which only runs in 'safe mode.' I've provided a slightly modified version of a `Rakefile` originally created by [Robert Rawlins](https://blog.sorryapp.com/blogging-with-jekyll/2014/01/31/using-jekyll-plugins-on-github-pages.html) that will help you accomplish this task. Once you are ready to publish, switch to your `gh-pages` branch and run the following command:
-
-```
-$ rake ed:publish
-
-```
-
-* * * * *
-
 Tips and Tricks
 ---------------
 
@@ -673,3 +517,4 @@ Happy editing!
 
 Alex Gil\
 April 2016
+
