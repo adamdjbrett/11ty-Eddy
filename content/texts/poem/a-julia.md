@@ -1,6 +1,7 @@
 ---
 title: A Julia de Burgos
 author: Julia de Burgos
+description: 
 editor: Alex Gil
 source: Ciudad Seva
 canoncial: 

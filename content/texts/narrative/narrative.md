@@ -1,5 +1,6 @@
 ---
 title: "Narrative of the Life of Frederick Douglass"
+description: 
 author: Frederick Douglass
 editor: Alex Gil
 rights: Public Domain

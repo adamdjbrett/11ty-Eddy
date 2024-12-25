@@ -1,6 +1,7 @@
 ---
 title: A Raisin in the Sun
 author: Lorraine Hansberry
+description: 
 editor: Alex Gil
 source: "Hansberry, Lorraine, and Robert Nemiroff. A Raisin in the Sun. Rep Rei edition. New York: Vintage, 2004. Print."
 canoncial: 

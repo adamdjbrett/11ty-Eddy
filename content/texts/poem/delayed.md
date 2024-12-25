@@ -1,6 +1,7 @@
 ---
 title: Delayed till she had ceased to know
 author: Emily Dickinson
+description: 
 editor: Alex Gil
 source: "Bartleby.com"
 canoncial: 
