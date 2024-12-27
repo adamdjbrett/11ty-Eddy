@@ -1,7 +1,7 @@
 {
 	"title": "Eddy.",
     "subtitle": "an 11tytheme for minimal editions",
-	"description": "Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.",
+	"description": "Eddy is an 11ty theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.",
 	"url": "https://11ty-eddy.netlify.app",
 	"favicon": "/favicon.ico",
 	"image": "/logo.png",
@@ -46,7 +46,7 @@
 		}],
 	"nav_github": {
 		"name": "Github",
-		"link": ""
+		"link": "https://github.com/adamdjbrett/11ty-eddy"
 	},
     "footer": {
 		"copyrights": {
