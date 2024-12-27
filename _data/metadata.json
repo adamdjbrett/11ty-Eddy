@@ -2,7 +2,7 @@
 	"title": "Eddy.",
     "subtitle": "an 11tytheme for minimal editions",
 	"description": "Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.",
-	"url": "http://localhost:8080",
+	"url": "https://11ty-eddy.netlify.app",
 	"favicon": "/favicon.ico",
 	"image": "/logo.png",
 	"language": "en",
