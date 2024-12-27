@@ -1,0 +1,5 @@
+{% if show_table_of_content %}<hr/><div class="article">
+<h3>{{metadata.table_of_content_title}}</h3>
+<div class="toci">
+{{ content | toc| safe }}
+</div><hr/>{% endif %}

@@ -1,6 +1,8 @@
 # Eddy: An ~~Jekyll~~ 11ty Theme for Minimal Editions
 We are trying to be as faithful as possible in modifying this template to work with 11ty.
 
+11ty Developer [Adam Dj Brett](https://www.adamdjbrett.com)
+
 ## CHANGELOG
 1. SCSS to CSS - to make it easier for intro students
 2. sorting the /texts/ into themeatic categories based on the layouts.
@@ -12,6 +14,60 @@ We are trying to be as faithful as possible in modifying this template to work w
 6. swapping the Jekyll TOC for the [11ty TOC plugin](https://plug11ty.com/plugins/table-of-contents/)
 7. swapping footnotes to standard Markdown footnotes
 8. adding set theme color selector to `_data/metadata.json`
+9. adding tags
+
+### Themes Color 
+
+Open File on `_data/metadata.json`
+
+- Red Themes Code: `08`
+  - implementation `"theme_base_color": "08"`
+- Orange Themes Code: `09`
+  - implementation `"theme_base_color": "09"`
+- Yellow Themes Code: `0a`
+  - implementation `"theme_base_color": "0a"`
+- Green Themes Code: `0b`
+  - implementation `"theme_base_color": "0b"`
+- Cyan Themes Code: `0c`
+  - implementation `"theme_base_color": "0c"`
+- Blue Themes Code: `0d`
+  - implementation `"theme_base_color": "0d"`
+- Magenta Themes Code: `0e`
+  - implementation `"theme_base_color": "0e"`
+- Brown Themes Code: `0f`
+  - implementation `"theme_base_color": "0f"`
+
+
+### Using Class ,ID , Footer Notes on Markdown
+
+Example 
+
+Footer Notes
+
+`O Captain! my Captain! our fearful trip is done;[^fn1]`
+
+Class
+
+`But O heart! heart! heart!{.indent-3}`
+
+Footer Notes
+
+`[^fn2]: The bugle is a small trumpet implicated in the military industrial complex.`
+
+
+### Using Table of Content
+
+Enable table of content set : true
+
+Implementation:
+`show_table_of_content: true`
+
+Disbale table of content set : false
+
+Implementation:
+`show_table_of_content: false`
+
+
 
 * * *
 
@@ -78,3 +134,4 @@ for you, Kindle!
 
 To learn how to install and begin using Ed, please visit our
 [documentation page](http://minicomp.github.io/ed/documentation).
+

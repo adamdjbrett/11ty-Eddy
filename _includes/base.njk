@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+{% include "partials/head.njk" %}
+ <body class="theme-base-{{metadata.theme_base_color}}">
+{% include "partials/menu.njk" %}
+{{content|safe}}
+{%- js %}{% include "public/js/main.js" %}{% endjs %}
+<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+</body>
+</html>

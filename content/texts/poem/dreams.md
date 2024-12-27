@@ -1,9 +1,10 @@
 ---
-layout: poem
 title: Dreams
 author: Langston Hughes
+description: 
 editor: Alex Gil
 source: Project Guttenberg
+canoncial: 
 ---
 
 - Hold fast to dreams
