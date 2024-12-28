@@ -7,9 +7,6 @@
 <a class="sidebar-nav-item" href="#">Return to Top</a>
 <a class="sidebar-nav-item" href="#title_page">{{title}}</a>
 {{ content | toc| safe }}
-<!-- Marked for deletion - old style <span style='cursor:pointer;' onclick="javascript:var hypothesis = document.createElement('script');
-hypothesis.setAttribute('src','https://hypothes.is/embed.js');
-document.head.appendChild(hypothesis);"> -->
 <span style="cursor:pointer;" onclick="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();">Annotate me</span>
 <a class="sidebar-nav-item">Annotate me</a></span>
 <a class="sidebar-nav-item" href="{{metadata.nav_github.link}}" target="_blank">{{metadata.nav_github.name}}</a>

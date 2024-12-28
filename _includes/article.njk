@@ -3,7 +3,7 @@ layout: base.njk
 ---
 <main class="container content" id="main">
 <article class="poem poetry">
-<h1 class="text-title">{{title}}</h1>
+<h1 class="text-title" aria-label="main anchor {{ title }}">{{title}}</h1>
 <p class="byline">{{author or description}}</p>
 {% include "partials/toc.njk" %}
 <div class="article">
