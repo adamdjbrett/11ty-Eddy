@@ -28,7 +28,7 @@
 <link rel="shortcut icon" href="{{metadata.favicon}}" />
 <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 <link rel="canonical" href="{{canonical or metadata.url}}/"/>
-<meta name="locale" content="{{metadata.locale}}">
+<meta name="locale" content="{{locale or metadata.locale}}">
 <meta name="generator" content="{{ eleventy.generator }}">
 {%- css %}{% include "public/css/main.css" %}{% endcss %}
 {%- css %}{% include "public/css/nu.css" %}{% endcss %}

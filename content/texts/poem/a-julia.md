@@ -6,6 +6,7 @@ editor: Alex Gil
 source: Ciudad Seva
 canoncial: 
 language: es
+locale: es-ES
 ---
 
 Ya las gentes murmuran que yo soy tu enemiga
